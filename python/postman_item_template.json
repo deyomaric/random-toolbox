@@ -1,0 +1,29 @@
+{
+    "name": "",
+    "event": [
+        {
+            "listen": "test",
+            "script": {
+                "exec": [
+                    "pm.test('Check Status', () => {",
+                    "    switch(pm.response.code){",
+                    "        case 200:",
+                    "            console.log(\"It's 200\")",
+                    "            break;",
+                    "        case 404:",
+                    "            console.log(pm.request.url + \"encountered an error\")",
+                    "            break;",
+                    "        default:",
+                    "            console.error(\"Error occured in the call.\")",
+                    "    }",
+                    "})"
+                ],
+                "type": "text/javascript",
+                "packages": {}
+            }
+        }
+    ],
+    "request": {
+    },
+    "response": []
+}
